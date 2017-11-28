@@ -1,5 +1,8 @@
 package dookay.dklibrary.base;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,9 +16,15 @@ import butterknife.ButterKnife;
 import dookay.dklibrary.view.LoadingDialogUtils;
 
 public abstract class BaseHomeFragment extends Fragment {
-
+    protected Activity mActivity;
     public Gson gson;
     public LoadingDialogUtils dialogUtils;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mActivity = (Activity) context;
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +48,18 @@ public abstract class BaseHomeFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
+
+
+    /**
+     * 页面跳转
+     * @param cla
+     */
+    public void setIntentClass(Class<?> cla) {
+        Intent intent = new Intent();
+        intent.setClass(mActivity, cla);
+        startActivity(intent);
+    }
+
 
     /**
      * 该抽象方法就是 onCreateView中需要的layoutID
