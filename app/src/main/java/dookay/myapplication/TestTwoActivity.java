@@ -13,19 +13,15 @@ import dookay.dklibrary.base.BaseActivity;
  * @describe:
  */
 public class TestTwoActivity extends BaseActivity {
-
     TextView txtinfo, txtinfo2;
-
     @Override
     protected int getLayout() {
         return R.layout.activity_main;
     }
-
     @Override
     protected void getIntentData(Bundle savedInstanceState) {
 
     }
-
     @Override
     protected void initView() {
         txtinfo = (TextView) findViewById(R.id.txtinfo);

@@ -1,4 +1,4 @@
-package dookay.dklibrary.utils;
+package com.jph.takephoto;
 
 import android.app.Activity;
 import android.net.Uri;
