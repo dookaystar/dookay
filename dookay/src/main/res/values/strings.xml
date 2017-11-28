@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DK Library</string>
+    <string name="downloading">正在下载请等待...</string>
+</resources>

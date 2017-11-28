@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000">
+
+    <RelativeLayout
+        android:id="@+id/click_to_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/popup_anima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="拍照"
+                android:textColor="@color/color_36" />
+
+            <include layout="@layout/view_line"></include>
+
+            <TextView
+                android:id="@+id/tx_2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="相册"
+                android:textColor="@color/color_36" />
+
+            <include layout="@layout/view_line"></include>
+
+            <TextView
+                android:id="@+id/tx_3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/color_36" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

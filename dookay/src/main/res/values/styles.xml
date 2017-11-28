@@ -1,0 +1,72 @@
+<resources>
+
+
+    <!-- 弹窗动画-->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">  <!--使用旋转动画-->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="Layout_vertical">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="Layout_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+    <style name="Layout_weight_vertical">
+        <item name="android:layout_width">@dimen/offset_0</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Layout_weight_horzontal">
+        <item name="android:layout_width">@dimen/offset_0</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Txt_font_Fourteen">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
+    <style name="Txt_weight_font_Fourteen">
+        <item name="android:layout_width">@dimen/offset_0</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
+    <!--动画相关-->
+    <style name="SpinKitView">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:maxWidth">48dip</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
+
+
+   <!-- popupwindow-->
+    <style name="PopupAnimaFade" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/basepopup_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/basepopup_fade_out</item>
+    </style>
+
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DK Library</string>
+    <string name="downloading">Downloading, please wait...</string>
+</resources>
