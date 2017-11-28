@@ -34,7 +34,7 @@ dependencies {
     compile 'com.mylhyl:acp:1.1.7'
     /*获取权限*/
     compile 'com.jakewharton:butterknife:8.6.0'
- /*   compile project(':takephoto_library')*/
+    compile project(':takephoto_library')
     /*拍照*/
     /*用于popuwindow*/
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
