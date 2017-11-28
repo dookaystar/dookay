@@ -1,5 +1,4 @@
-/*
-package dookay.dklibrary.utils;
+package com.jph.takephoto;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -14,7 +13,6 @@ import com.jph.takephoto.model.TakePhotoOptions;
 
 import java.io.File;
 
-*/
 /**
  * 用于拍照
  * B 代表 Bytes
@@ -23,13 +21,11 @@ import java.io.File;
  * @date：2017/11/24
  * @time：13:34
  * @describe:
- *//*
-
+ */
 public class PhotoUtil {
     private Activity activity;
     public TakePhoto takePhoto;
-    */
-/**
+    /**
      * isShear =是否剪切
      * isCuttingTool= 剪切工具   true默认使用 TakePhoto自带的剪切工具
      * widthShear== 裁剪的宽
@@ -43,21 +39,18 @@ public class PhotoUtil {
      * isCorrectionAngle== 是否纠正相片角度  默认true 不纠正角度
      * isSavePictures == 是否保存图片 默认不保存
      * isSelectAddress== 选择图片的地址， 相册和文件中 默认相册
-     *//*
-
+     */
     private boolean isShear, isCuttingTool = true, isCompressionTool = true, isCompress, isShowProgressBar, isBringAlbum = true, isSelectAddress = false, isCorrectionAngle = true, isSavePictures;
     private int widthShear = 800, highShear = 800, pictureSize, selectPhotoCount;
 
-    */
-/**
+    /**
      * @param activity
      * @param takePhoto
      * @param isShear          是否剪切
      * @param isCompress       是否压缩
      * @param pictureSize      图片大小
      * @param selectPhotoCount 相片的张数
-     *//*
-
+     */
     public PhotoUtil(Activity activity, TakePhoto takePhoto, boolean isShear, boolean isCompress, int pictureSize, int selectPhotoCount) {
         this.activity = activity;
         this.takePhoto = takePhoto;
@@ -129,17 +122,13 @@ public class PhotoUtil {
         if (isCompressionTool) {
             config = new CompressConfig.Builder()
                     .setMaxSize(pictureSize)
-                */
-/*    .setMaxPixel(width >= height ? width : height)*//*
-
+                /*    .setMaxPixel(width >= height ? width : height)*/
                     .enableReserveRaw(isSavePictures)
                     .create();
         } else {
             LubanOptions option = new LubanOptions.Builder()
-              */
-/*      .setMaxHeight(height)
-                    .setMaxWidth(width)*//*
-
+              /*      .setMaxHeight(height)
+                    .setMaxWidth(width)*/
                     .setMaxSize(pictureSize)
                     .create();
             config = CompressConfig.ofLuban(option);
@@ -173,4 +162,3 @@ public class PhotoUtil {
     }
 
 }
-*/
