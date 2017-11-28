@@ -1,15 +1,12 @@
 package dookay.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.jph.takephoto.app.TakePhotoActivity;
-import com.jph.takephoto.model.TResult;
-
 import dookay.dklibrary.utils.SendMessageTimerUtils;
-import dookay.dklibrary.utils.GlideImgManager;
+
 
 /**
  * @author：Qaufue
@@ -17,7 +14,7 @@ import dookay.dklibrary.utils.GlideImgManager;
  * @time：13:01
  * @describe:
  */
-public class MainPhotographActivity extends TakePhotoActivity {
+public class MainPhotographActivity extends Activity {
     TextView textView, textViewtwo, txt_start;
     ImageView imgview;
     private SendMessageTimerUtils downTimerUtils;
@@ -52,21 +49,6 @@ public class MainPhotographActivity extends TakePhotoActivity {
         });
     }
 
-    @Override
-    public void takeSuccess(TResult result) {
-        super.takeSuccess(result);
-        GlideImgManager.glideLoader(MainPhotographActivity.this, result.getImages().get(0).getCompressPath(), imgview);
-    }
-
-    @Override
-    public void takeFail(TResult result, String msg) {
-        super.takeFail(result, msg);
-    }
-
-    @Override
-    public void takeCancel() {
-        super.takeCancel();
-    }
 
 
 }

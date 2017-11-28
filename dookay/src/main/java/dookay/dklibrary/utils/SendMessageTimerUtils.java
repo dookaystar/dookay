@@ -23,7 +23,7 @@ import dookay.dklibrary.R;
 public class SendMessageTimerUtils extends CountDownTimer {
     private TextView mTextView;
     private Context context;
-    private int[] timecolor = {R.color.color_36, R.color.crop__button_text, R.color.crop__button_text, R.color.color_36, R.color.color_36};
+    private int[] timecolor = {R.color.color_36, R.color.color_36, R.color.color_36, R.color.color_36, R.color.color_36};
 
     private boolean isPosition;
     private String txtstrinfo;
