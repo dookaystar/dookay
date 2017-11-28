@@ -9,7 +9,7 @@ import android.text.TextUtils;
  * Describe:
  */
 
-public class ConstantStringUtils {
+public class ConstantinfoUtils {
     public static final String MESSAGE = "message";
     public static final String UserName = "UserName";
     public static final String PhoneNumber = "PhoneNumber";

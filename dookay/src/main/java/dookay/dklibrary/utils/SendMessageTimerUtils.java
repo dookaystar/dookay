@@ -78,7 +78,6 @@ public class SendMessageTimerUtils extends CountDownTimer {
             //如果想给按钮上的字设置颜色可以进行以下操作：
             SpannableString spannableString = new SpannableString(mTextView.getText().toString());  //获取按钮上的文字
             ForegroundColorSpan span = new ForegroundColorSpan(ContextCompat.getColor(context, timecolor[ConstantIntUtils.ZERO]));//设置文本颜色
-
             if (timeSecond >= 100) {
                 spannableString.setSpan(span, mTextView.length() - ConstantIntUtils.FOUR, mTextView.length() - ConstantIntUtils.ONE, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
             } else if (timeSecond >= 10) {
