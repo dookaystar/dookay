@@ -16,7 +16,7 @@ import okhttp3.Call;
  */
 public abstract class OkhttpUtils {
 
-    public void GetJson(String url, final Map<String, String> map, final int i) {
+    public void getJson(String url, final Map<String, String> map, final int i) {
         OkHttpUtils
                 .get()
                 .addHeader("Accept", "application/json")
@@ -34,7 +34,7 @@ public abstract class OkhttpUtils {
                 });
     }
 
-    public void PostJson(final String url, Map<String, String> map, final int i) {
+    public void postJson(final String url, Map<String, String> map, final int i) {
 
         OkHttpUtils
                 .post()
@@ -80,7 +80,7 @@ public abstract class OkhttpUtils {
                 });
     }
     
-    public void GetJsonResutFive(final String url, final Map<String, String> map, final int i) {
+    public void getJsonResutFive(final String url, final Map<String, String> map, final int i) {
         OkHttpUtils
                 .get()
                 .addHeader("Accept", "application/json")

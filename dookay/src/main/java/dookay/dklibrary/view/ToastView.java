@@ -61,7 +61,7 @@ public class ToastView {
         toast.show();
     }
 
-    public void DissToast() {
+    public void dissToast() {
         if (toast.getView().getVisibility() == View.VISIBLE) {
             toast.cancel();
         }
