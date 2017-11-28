@@ -41,7 +41,6 @@ public class TestTwoActivity extends BaseActivity {
         });
 
     }
-
     @Override
     protected void initData() {
 
