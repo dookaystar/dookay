@@ -12,7 +12,6 @@ import com.jph.takephoto.model.LubanOptions;
 import com.jph.takephoto.model.TakePhotoOptions;
 
 import java.io.File;
-
 /**
  * 用于拍照
  * B 代表 Bytes
