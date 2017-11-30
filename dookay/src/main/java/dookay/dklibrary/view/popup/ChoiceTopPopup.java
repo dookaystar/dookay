@@ -15,7 +15,7 @@ import java.util.List;
 
 import dookay.dklibrary.R;
 import dookay.dklibrary.utils.DimensUtils;
-import dookay.dklibrary.utils.RecylerAdapterUtil;
+import dookay.dklibrary.utils.RecylerAdapterUtils;
 import dookay.dklibrary.view.popup.basepopup.BasePopupWindow;
 
 
@@ -49,7 +49,7 @@ public abstract class ChoiceTopPopup extends BasePopupWindow {
                 onclikItem(stringList.get(position), position);
             }
         });
-        RecylerAdapterUtil.SetAdapter(activity, listView, recyclerAdapter);
+        RecylerAdapterUtils.SetAdapter(activity, listView, recyclerAdapter);
     }
 
     private int oKItem;
@@ -102,7 +102,7 @@ public abstract class ChoiceTopPopup extends BasePopupWindow {
                     onclikItem(stringList.get(position), position);
                 }
             });
-            RecylerAdapterUtil.SetAdapter(activity, listView, recyclerAdapter);
+            RecylerAdapterUtils.SetAdapter(activity, listView, recyclerAdapter);
         } else {
             recyclerAdapter.setData(stringList);
         }

@@ -34,6 +34,7 @@ public class TestActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
               /*  dialogUtils.showDialog();*/
+                dialogUtils.showDialog();
                 setIntentClass(TestTwoActivity.class);
             }
         });

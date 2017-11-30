@@ -17,7 +17,7 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
  * Created by 李双 on 2016/11/10.
  */
 
-public class GlideImgManager {
+public class GlideImgUtils {
 
     /**
      * 用于加载图片

@@ -41,7 +41,6 @@ public class PhotoUtil {
      */
     private boolean isShear, isCuttingTool = true, isCompressionTool = true, isCompress, isShowProgressBar, isBringAlbum = true, isSelectAddress = false, isCorrectionAngle = true, isSavePictures;
     private int widthShear = 800, highShear = 800, pictureSize, selectPhotoCount;
-
     /**
      * @param activity
      * @param takePhoto
@@ -59,7 +58,6 @@ public class PhotoUtil {
         this.selectPhotoCount = selectPhotoCount;
         isCorrectionAngle = true;
     }
-
     // 开始拍照
     public void takePhotograph() {
         File file = new File(Environment.getExternalStorageDirectory(), "/temp/" + System.currentTimeMillis() + ".jpg");
@@ -75,8 +73,6 @@ public class PhotoUtil {
             takePhoto.onPickFromCapture(imageUri);
         }
     }
-
-
     // 开始选择图片
     public void choosePicture() {
         File file = new File(Environment.getExternalStorageDirectory(), "/temp/" + System.currentTimeMillis() + ".jpg");
@@ -95,7 +91,6 @@ public class PhotoUtil {
             }
             return;
         }
-
         if (isSelectAddress) {
             if (isShear) {
                 takePhoto.onPickFromDocumentsWithCrop(imageUri, getCropOptions());

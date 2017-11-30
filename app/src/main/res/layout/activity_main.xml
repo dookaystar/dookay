@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/font_size_50"
-        android:text="西方恋爱"
+        android:text="东方不败"
         android:textSize="@dimen/font_size_22" />
 
     <ImageView

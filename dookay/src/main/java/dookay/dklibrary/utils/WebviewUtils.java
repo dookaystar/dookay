@@ -20,7 +20,7 @@ import dookay.dklibrary.settings.SystemUtil;
 /**
  * 用于 缓存  等
  */
-public class WebviewHelper {
+public class WebviewUtils {
     public static void WebHC(final Context context, WebView mWebView, final ProgressBar progressBar, String url) {
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
@@ -53,7 +53,6 @@ public class WebviewHelper {
                 return true;
             }
         });
-
         mWebView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {

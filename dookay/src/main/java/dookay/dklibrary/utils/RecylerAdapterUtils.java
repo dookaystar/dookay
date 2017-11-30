@@ -14,7 +14,7 @@ import com.github.library.view.LoadType;
  * Created by 李双 on 2017/2/9.
  */
 
-public class RecylerAdapterUtil {
+public class RecylerAdapterUtils {
 
     /**
      * 用于设置 adpter   ,
