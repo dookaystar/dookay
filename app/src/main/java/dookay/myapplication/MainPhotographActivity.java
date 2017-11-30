@@ -1,3 +1,4 @@
+/*
 package dookay.myapplication;
 
 import android.os.Bundle;
@@ -17,12 +18,14 @@ import dookay.dklibrary.utils.SendMessageTimerUtils;
 import dookay.dklibrary.utils.GlideImgUtils;
 import dookay.dklibrary.view.popup.ChoiceTopPopup;
 
+*/
 /**
  * @author：Qaufue
  * @date：2017/11/24
  * @time：13:01
  * @describe:
- */
+ *//*
+
 public class MainPhotographActivity extends TakePhotoActivity {
     TextView textView, textViewtwo, txt_start;
     ImageView imgview;
@@ -95,3 +98,4 @@ public class MainPhotographActivity extends TakePhotoActivity {
 
 
 }
+*/
