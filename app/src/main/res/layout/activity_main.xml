@@ -8,6 +8,13 @@
     android:orientation="vertical"
     tools:context="dookay.myapplication.MainActivity">
 
+
+    <dookay.dklibrary.view.overlap_img.PileLayout
+        android:id="@+id/pile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:PileLayout_pileWidth="10dp" />
+
     <TextView
         android:id="@+id/txtinfo"
         android:layout_width="match_parent"

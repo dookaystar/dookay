@@ -15,7 +15,6 @@
         <attr name="pst_textAllCaps" format="boolean" />
     </declare-styleable>
 
-
     <!-- 动画-->
     <attr name="SpinKitViewStyle" format="reference" />
     <declare-styleable name="SpinKitView">
@@ -26,4 +25,22 @@
         </attr>
         <attr name="SpinKit_Color" format="color" />
     </declare-styleable>
+
+    <!--重叠头像-->
+    <declare-styleable name="AbsRoundImageView">
+        <attr name="round_borderWidth" format="dimension|reference" />
+        <attr name="round_borderColor" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr name="leftTopRadius" format="dimension|reference" />
+        <attr name="rightTopRadius" format="dimension|reference" />
+        <attr name="rightBottomRadius" format="dimension|reference" />
+        <attr name="leftBottomRadius" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="PileLayout">
+        <attr name="PileLayout_vertivalSpace" format="dimension"/>
+        <attr name="PileLayout_pileWidth" format="dimension"/>
+    </declare-styleable>
+    <!--重叠头像 AA-->
+
 </resources>

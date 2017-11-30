@@ -1,10 +1,18 @@
 package dookay.myapplication;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import dookay.dklibrary.base.BaseActivity;
+import dookay.dklibrary.view.overlap_img.CircleImageView;
+import dookay.dklibrary.view.overlap_img.PileLayout;
 
 /**
  * @author：Qaufue
@@ -14,7 +22,6 @@ import dookay.dklibrary.base.BaseActivity;
  */
 public class TestActivity extends BaseActivity {
 
-    TextView txtinfo, txtinfo2;
 
     @Override
     protected int getLayout() {
@@ -28,24 +35,30 @@ public class TestActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        txtinfo = (TextView) findViewById(R.id.txtinfo);
-        txtinfo2 = (TextView) findViewById(R.id.txtinfo2);
-        txtinfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              /*  dialogUtils.showDialog();*/
-                dialogUtils.showDialog();
-                setIntentClass(TestTwoActivity.class);
-            }
-        });
-        txtinfo2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialogUtils.dismissDialog();
-            }
-        });
+        pileLayout = (PileLayout) findViewById(R.id.pile_layout);
 
+        List<String> strings = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                strings.add("http://img2.imgtn.bdimg.com/it/u=1939271907,257307689&fm=21&gp=0.jpg");
+            } else {
+                strings.add("http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg");
+            }
+        }
+        pileLayout.setDataPraises(TestActivity.this, strings, pileLayout);
     }
+
+    PileLayout pileLayout;
+/*
+    String[] urls = {"http://img2.imgtn.bdimg.com/it/u=1939271907,257307689&fm=21&gp=0.jpg",
+            "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg",
+            "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg",
+            "http://img2.imgtn.bdimg.com/it/u=1939271907,257307689&fm=21&gp=0.jpg",
+            "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg",
+            "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg"
+    };
+*/
+
 
     @Override
     protected void initData() {
