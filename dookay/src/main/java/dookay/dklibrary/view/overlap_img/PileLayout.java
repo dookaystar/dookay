@@ -180,10 +180,10 @@ public class PileLayout extends ViewGroup {
      * @param stringList
      * @param pileLayout
      */
-    public void setDataPraises(Context context, List<String> stringList, PileLayout pileLayout) {
+    public void setDataPraises(Context context, List<String> stringList, PileLayout pileLayout,int layoutitem) {
         LayoutInflater inflater = LayoutInflater.from(context);
         for (int i = 0; i < stringList.size(); i++) {
-            CircleImageView imageView = (CircleImageView) inflater.inflate(R.layout.item_praise, pileLayout, false);
+            CircleImageView imageView = (CircleImageView) inflater.inflate(layoutitem, pileLayout, false);
             Glide.with(context).load(stringList.get(i)).into(imageView);
             pileLayout.addView(imageView);
         }

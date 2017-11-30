@@ -44,7 +44,7 @@ public class TestActivity extends BaseActivity {
                 strings.add("http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg");
             }
         }
-        pileLayout.setDataPraises(TestActivity.this, strings, pileLayout);
+        pileLayout.setDataPraises(TestActivity.this, strings, pileLayout, R.layout.item_praise);
     }
 
     PileLayout pileLayout;
