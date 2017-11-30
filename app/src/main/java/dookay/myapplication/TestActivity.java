@@ -36,7 +36,6 @@ public class TestActivity extends BaseActivity {
     @Override
     protected void initView() {
         pileLayout = (PileLayout) findViewById(R.id.pile_layout);
-
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             if (i % 2 == 0) {
