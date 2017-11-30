@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtinfo;
     AppUpdateUtils updateUtils;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
