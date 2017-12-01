@@ -180,11 +180,11 @@ public class PileLayout extends ViewGroup {
      * @param stringList
      * @param pileLayout
      */
-    public void setDataPraises(Context context, List<String> stringList, PileLayout pileLayout, int layoutitem, int erroImg) {
+    public void setDataPraises(Context context, String[] stringList, PileLayout pileLayout, int layoutitem, int erroImg) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        for (int i = 0; i < stringList.size(); i++) {
+        for (int i = 0; i < stringList.length; i++) {
             CircleImageView imageView = (CircleImageView) inflater.inflate(layoutitem, pileLayout, false);
-            Glide.with(context).load(stringList.get(i)).error(erroImg).into(imageView);
+            Glide.with(context).load(stringList[i]).error(erroImg).into(imageView);
             pileLayout.addView(imageView);
         }
     }
@@ -196,11 +196,11 @@ public class PileLayout extends ViewGroup {
      * @param stringList
      * @param pileLayout
      */
-    public void setDataPraises(Context context, List<String> stringList, PileLayout pileLayout, int erroImg) {
+    public void setDataPraises(Context context, String[] stringList, PileLayout pileLayout, int erroImg) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        for (int i = 0; i < stringList.size(); i++) {
+        for (int i = 0; i < stringList.length; i++) {
             CircleImageView imageView = (CircleImageView) inflater.inflate(R.layout.item_praise, pileLayout, false);
-            Glide.with(context).load(stringList.get(i)).error(erroImg).into(imageView);
+            Glide.with(context).load(stringList[i]).error(erroImg).into(imageView);
             pileLayout.addView(imageView);
         }
     }
