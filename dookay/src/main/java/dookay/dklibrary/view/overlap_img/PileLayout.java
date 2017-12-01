@@ -204,6 +204,4 @@ public class PileLayout extends ViewGroup {
             pileLayout.addView(imageView);
         }
     }
-
-
 }
