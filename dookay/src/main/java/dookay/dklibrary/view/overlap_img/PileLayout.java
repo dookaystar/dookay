@@ -189,7 +189,6 @@ public class PileLayout extends ViewGroup {
             pileLayout.addView(imageView);
         }
     }
-
     /**
      * 用于显示内容
      *
@@ -201,7 +200,7 @@ public class PileLayout extends ViewGroup {
         LayoutInflater inflater = LayoutInflater.from(context);
         for (int i = 0; i < stringList.length; i++) {
             CircleImageView imageView = (CircleImageView) inflater.inflate(R.layout.item_praise, pileLayout, false);
-            GlideImgUtils.glideLoader(context, stringList[i], imageView);
+            Glide.with(context).load(stringList[i]).into(imageView);
             pileLayout.addView(imageView);
         }
     }
