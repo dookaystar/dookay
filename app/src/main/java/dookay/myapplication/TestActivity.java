@@ -44,11 +44,11 @@ public class TestActivity extends BaseActivity {
                 strings.add("http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg");
             }
         }
-        pileLayout.setDataPraises(TestActivity.this, strings, pileLayout, R.layout.item_praise);
+        pileLayout.setDataPraises(TestActivity.this, urls, pileLayout, R.mipmap.liblogo);
     }
 
     PileLayout pileLayout;
-/*
+
     String[] urls = {"http://img2.imgtn.bdimg.com/it/u=1939271907,257307689&fm=21&gp=0.jpg",
             "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg",
             "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg",
@@ -56,7 +56,6 @@ public class TestActivity extends BaseActivity {
             "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg",
             "http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg"
     };
-*/
 
 
     @Override

@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import dookay.dklibrary.R;
+import dookay.dklibrary.utils.GlideImgUtils;
 
 /**
  * Created by chenliu on 2016/11/22.<br/>
@@ -180,11 +181,11 @@ public class PileLayout extends ViewGroup {
      * @param stringList
      * @param pileLayout
      */
-    public void setDataPraises(Context context, String[] stringList, PileLayout pileLayout, int layoutitem, int erroImg) {
+    public void setDataPraises(Context context, String[] stringList, PileLayout pileLayout, int layoutitem) {
         LayoutInflater inflater = LayoutInflater.from(context);
         for (int i = 0; i < stringList.length; i++) {
             CircleImageView imageView = (CircleImageView) inflater.inflate(layoutitem, pileLayout, false);
-            Glide.with(context).load(stringList[i]).error(erroImg).into(imageView);
+            Glide.with(context).load(stringList[i]).into(imageView);
             pileLayout.addView(imageView);
         }
     }
@@ -196,11 +197,11 @@ public class PileLayout extends ViewGroup {
      * @param stringList
      * @param pileLayout
      */
-    public void setDataPraises(Context context, String[] stringList, PileLayout pileLayout, int erroImg) {
+    public void setDataPraises(Context context, String[] stringList, PileLayout pileLayout) {
         LayoutInflater inflater = LayoutInflater.from(context);
         for (int i = 0; i < stringList.length; i++) {
             CircleImageView imageView = (CircleImageView) inflater.inflate(R.layout.item_praise, pileLayout, false);
-            Glide.with(context).load(stringList[i]).error(erroImg).into(imageView);
+            GlideImgUtils.glideLoader(context, stringList[i], imageView);
             pileLayout.addView(imageView);
         }
     }
