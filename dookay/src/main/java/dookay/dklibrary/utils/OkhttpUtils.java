@@ -1,5 +1,4 @@
 package dookay.dklibrary.utils;
-
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
@@ -12,7 +11,6 @@ import java.util.Map;
 
 import dookay.dklibrary.view.ToastView;
 import okhttp3.Call;
-
 /**
  * 用于数据请求
  * Created by  on 2017/1/3.
@@ -95,7 +93,6 @@ public abstract class OkhttpUtils {
                         Log.e("httpError", "Message:" + e.getMessage() + "  Url:" + url + "  Map:" + map.toString() + "  Code:" + i);
                         ShowError(e.getMessage(), i);
                     }
-
                     @Override
                     public void onResponse(String response, int id) {
                         ShowResponse(response, i);
