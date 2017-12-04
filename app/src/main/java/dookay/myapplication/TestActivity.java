@@ -1,17 +1,12 @@
 package dookay.myapplication;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
+import android.util.Log;
 
-import com.bumptech.glide.Glide;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 import dookay.dklibrary.base.BaseActivity;
-import dookay.dklibrary.view.overlap_img.CircleImageView;
+import dookay.dklibrary.utils.ConstantIntUtils;
 import dookay.dklibrary.view.overlap_img.PileLayout;
 
 /**
@@ -35,16 +30,7 @@ public class TestActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        pileLayout = (PileLayout) findViewById(R.id.pile_layout);
-        List<String> strings = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            if (i % 2 == 0) {
-                strings.add("http://img2.imgtn.bdimg.com/it/u=1939271907,257307689&fm=21&gp=0.jpg");
-            } else {
-                strings.add("http://img0.imgtn.bdimg.com/it/u=2263418180,3668836868&fm=206&gp=0.jpg");
-            }
-        }
-        pileLayout.setDataPraises(TestActivity.this, urls, pileLayout, R.mipmap.liblogo);
+
     }
 
     PileLayout pileLayout;
@@ -61,5 +47,34 @@ public class TestActivity extends BaseActivity {
     @Override
     protected void initData() {
 
+
+   /*     OkhttpInfoUtil  okhttpInfoUtil= new OkhttpInfoUtil(TestActivity.this) {
+            @Override
+            public void ShowResponse(String response, int okitem) {
+
+            }
+
+            @Override
+            public void ShowError(String response, int erritem) {
+
+            }
+        };*/
+        okhttpInfoUtil.getJson("http://ip-27-joyway-app.coralcodes.com/u/info?token=802db37eb25f40cd9db6dba6b2972cf17pM84c&client=android",
+                new HashMap<String, String>(), ConstantIntUtils.ZERO
+        );
     }
+
+    OkhttpInfoUtil okhttpInfoUtil = new OkhttpInfoUtil(TestActivity.this) {
+        @Override
+        protected void ShowInfoResponse(String response, int okitem) {
+
+            Log.e("info", "东方不败" + response);
+        }
+
+        @Override
+        protected void ShowInfoError(String response, int erritem) {
+            Log.e("info", "东方不败" + response);
+        }
+    };
+
 }
