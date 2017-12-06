@@ -8,12 +8,15 @@ import android.view.animation.Animation;
 import android.view.animation.OvershootInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
+
 import com.github.library.BaseRecyclerAdapter;
 import com.github.library.BaseViewHolder;
 import com.github.library.listener.OnRecyclerItemClickListener;
+
 import java.util.List;
 
 import dookay.dklibrary.R;
+import dookay.dklibrary.utils.ConstantIntUtils;
 import dookay.dklibrary.utils.DimensUtils;
 import dookay.dklibrary.utils.RecylerAdapterUtils;
 import dookay.dklibrary.view.popup.basepopup.BasePopupWindow;
@@ -117,7 +120,6 @@ public abstract class ChoiceTopPopup extends BasePopupWindow {
 
         @Override
         public void onDismiss() {
-
         }
     };
 
@@ -146,4 +148,10 @@ public abstract class ChoiceTopPopup extends BasePopupWindow {
     }
 
     public abstract void onclikItem(String str, int item);
+
+    @Override
+    public void onDismiss() {
+        onclikItem(null, ConstantIntUtils.MINUS_TEN);
+        super.onDismiss();
+    }
 }

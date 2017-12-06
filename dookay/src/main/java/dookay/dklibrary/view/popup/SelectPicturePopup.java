@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import butterknife.OnClick;
 import dookay.dklibrary.R;
+import dookay.dklibrary.utils.ConstantIntUtils;
 import dookay.dklibrary.view.popup.basepopup.BasePopupWindow;
 
 
@@ -71,4 +72,11 @@ public abstract class SelectPicturePopup extends BasePopupWindow {
     public View initAnimaView() {
         return popupView.findViewById(R.id.popup_anima);
     }
+
+    @Override
+    public void onDismiss() {
+        onclikView( ConstantIntUtils.MINUS_TEN);
+        super.onDismiss();
+    }
+
 }

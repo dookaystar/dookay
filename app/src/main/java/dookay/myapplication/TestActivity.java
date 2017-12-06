@@ -48,33 +48,6 @@ public class TestActivity extends BaseActivity {
     protected void initData() {
 
 
-   /*     OkhttpInfoUtil  okhttpInfoUtil= new OkhttpInfoUtil(TestActivity.this) {
-            @Override
-            public void ShowResponse(String response, int okitem) {
-
-            }
-
-            @Override
-            public void ShowError(String response, int erritem) {
-
-            }
-        };*/
-        okhttpInfoUtil.getJson("http://ip-27-joyway-app.coralcodes.com/u/info?token=802db37eb25f40cd9db6dba6b2972cf17pM84c&client=android",
-                new HashMap<String, String>(), ConstantIntUtils.ZERO
-        );
     }
-
-    OkhttpInfoUtil okhttpInfoUtil = new OkhttpInfoUtil(TestActivity.this) {
-        @Override
-        protected void ShowInfoResponse(String response, int okitem) {
-
-            Log.e("info", "东方不败" + response);
-        }
-
-        @Override
-        protected void ShowInfoError(String response, int erritem) {
-            Log.e("info", "东方不败" + response);
-        }
-    };
 
 }

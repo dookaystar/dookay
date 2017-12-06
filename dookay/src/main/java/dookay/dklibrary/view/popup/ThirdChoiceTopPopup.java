@@ -16,6 +16,7 @@ import com.github.library.listener.OnRecyclerItemClickListener;
 import java.util.List;
 
 import dookay.dklibrary.R;
+import dookay.dklibrary.utils.ConstantIntUtils;
 import dookay.dklibrary.utils.DimensUtils;
 import dookay.dklibrary.utils.RecylerAdapterUtils;
 import dookay.dklibrary.view.popup.basepopup.BasePopupWindow;
@@ -149,4 +150,9 @@ public abstract class ThirdChoiceTopPopup extends BasePopupWindow {
     }
 
     public abstract void onclikItem(String str, int item);
+    @Override
+    public void onDismiss() {
+        onclikItem(null, ConstantIntUtils.MINUS_TEN);
+        super.onDismiss();
+    }
 }
