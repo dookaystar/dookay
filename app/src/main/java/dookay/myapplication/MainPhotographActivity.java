@@ -1,4 +1,3 @@
-/*
 package dookay.myapplication;
 
 import android.os.Bundle;
@@ -28,6 +27,8 @@ public class MainPhotographActivity extends TakePhotoActivity {
     ChoiceTopPopup topPopup;
 
     PhotoUtil photoUtil;
+    int a;
+    int b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,15 +47,16 @@ public class MainPhotographActivity extends TakePhotoActivity {
             strings.add(i + "东方不败" + i);
         }
 
+        a = 5;
+        b = 20;
+        a = b;
+        a = a - 4;
+        Log.e("info_ab", a + "---" + b);
+
         topPopup = new ChoiceTopPopup(MainPhotographActivity.this, strings, R.layout.item_popup_list) {
             @Override
             public void onclikItem(String str, int item) {
-                if (str != null) {
-                    Log.e("str", str + "-----");
-                } else {
-                    Log.e("str", "测试没有参数");
-                }
-
+            /*    Log.e("str", "---东方败--" + str);*/
             }
         };
 
@@ -96,4 +98,3 @@ public class MainPhotographActivity extends TakePhotoActivity {
 
 
 }
-*/

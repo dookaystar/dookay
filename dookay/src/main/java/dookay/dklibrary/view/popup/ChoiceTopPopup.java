@@ -151,7 +151,7 @@ public abstract class ChoiceTopPopup extends BasePopupWindow {
 
     @Override
     public void onDismiss() {
-        onclikItem(null, ConstantIntUtils.MINUS_TEN);
+        onclikItem(null, ConstantIntUtils.ZERO);
         super.onDismiss();
     }
 }
