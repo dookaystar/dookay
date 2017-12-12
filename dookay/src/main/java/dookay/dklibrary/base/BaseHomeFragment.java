@@ -14,11 +14,13 @@ import com.google.gson.Gson;
 
 import butterknife.ButterKnife;
 import dookay.dklibrary.view.LoadingDialogUtils;
+import dookay.dklibrary.view.ToastView;
 
 public abstract class BaseHomeFragment extends Fragment {
     protected Activity mActivity;
     public Gson gson;
     public LoadingDialogUtils dialogUtils;
+    public ToastView toastView;
 
     @Override
     public void onAttach(Context context) {
@@ -39,8 +41,8 @@ public abstract class BaseHomeFragment extends Fragment {
         View view = inflater.inflate(getLayoutId(), container, false);
         ButterKnife.bind(this, view);
         dialogUtils = new LoadingDialogUtils(getActivity());
+        toastView = new ToastView(getActivity());
         initView(view, savedInstanceState);
-
         return view;
     }
 
@@ -52,6 +54,7 @@ public abstract class BaseHomeFragment extends Fragment {
 
     /**
      * 页面跳转
+     *
      * @param cla
      */
     public void setIntentClass(Class<?> cla) {
@@ -75,6 +78,5 @@ public abstract class BaseHomeFragment extends Fragment {
      * @param savedInstanceState
      */
     protected abstract void initView(View view, Bundle savedInstanceState);
-
 }
 
