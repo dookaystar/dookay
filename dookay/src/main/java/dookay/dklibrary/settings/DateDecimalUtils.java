@@ -23,7 +23,7 @@ public class DateDecimalUtils {
     static SimpleDateFormat format3 = new SimpleDateFormat("E");
     static SimpleDateFormat format4 = new SimpleDateFormat("yyyy.MM.dd");
 
-    static SimpleDateFormat format5 = new SimpleDateFormat("yyyy.MM.dd");
+    static SimpleDateFormat format5 = new SimpleDateFormat("yyyy.MM.dd HH:mm");
 
     public static String getTimeYear(long time) {
         return milliseconds2String(time, format);
@@ -52,7 +52,7 @@ public class DateDecimalUtils {
     public static String getTimeYearSix(long time) {
         return milliseconds2String(time, format5);
     }
-    
+
     /**
      * 将时间戳转为时间字符串
      * <p>格式为用户自定义</p>
