@@ -24,34 +24,40 @@ public class DateDecimalUtils {
     static SimpleDateFormat format4 = new SimpleDateFormat("yyyy.MM.dd");
 
     static SimpleDateFormat format5 = new SimpleDateFormat("yyyy.MM.dd HH:mm");
+    static SimpleDateFormat format6 = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 
     public static String getTimeYear(long time) {
         return milliseconds2String(time, format);
     }
 
-    public static String getTimeYearOne(long time) {
+    public static String getTimeYearZero(long time) {
         return milliseconds2String(time, format0);
     }
 
-    public static String getTimeYearTwo(long time) {
+    public static String getTimeYearOne(long time) {
         return milliseconds2String(time, format1);
     }
 
-    public static String getTimeYearThree(long time) {
+    public static String getTimeYearTwo(long time) {
         return milliseconds2String(time, format2);
     }
 
-    public static String getTimeYearFor(long time) {
+    public static String getTimeYearThree(long time) {
         return milliseconds2String(time, format3);
     }
 
-    public static String getTimeYearFive(long time) {
+    public static String getTimeYearFor(long time) {
         return milliseconds2String(time, format4);
     }
 
-    public static String getTimeYearSix(long time) {
+    public static String getTimeYearFive(long time) {
         return milliseconds2String(time, format5);
     }
+
+    public static String getTimeYearSix(long time) {
+        return milliseconds2String(time, format6);
+    }
+
 
     /**
      * 将时间戳转为时间字符串
