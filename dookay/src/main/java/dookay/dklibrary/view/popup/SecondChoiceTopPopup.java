@@ -152,10 +152,4 @@ public abstract class SecondChoiceTopPopup extends BasePopupWindow {
 
     public abstract void onclikItem(String str, int item);
 
-    @Override
-    public void onDismiss() {
-        onclikItem(null, ConstantIntUtils.MINUS_TEN);
-        super.onDismiss();
-    }
-
 }

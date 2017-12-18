@@ -56,7 +56,7 @@ public class MainPhotographActivity extends TakePhotoActivity {
         topPopup = new ChoiceTopPopup(MainPhotographActivity.this, strings, R.layout.item_popup_list) {
             @Override
             public void onclikItem(String str, int item) {
-            /*    Log.e("str", "---东方败--" + str);*/
+                Log.e("str", "---东方败--" + str);
             }
         };
 

@@ -73,10 +73,5 @@ public abstract class SelectPicturePopup extends BasePopupWindow {
         return popupView.findViewById(R.id.popup_anima);
     }
 
-    @Override
-    public void onDismiss() {
-        onclikView( ConstantIntUtils.MINUS_TEN);
-        super.onDismiss();
-    }
 
 }
