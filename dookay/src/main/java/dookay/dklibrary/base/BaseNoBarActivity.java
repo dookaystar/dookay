@@ -5,9 +5,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-
 
 import com.google.gson.Gson;
 
@@ -17,7 +15,7 @@ import butterknife.ButterKnife;
 import dookay.dklibrary.view.LoadingDialogUtils;
 import dookay.dklibrary.view.ToastView;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseNoBarActivity extends AppCompatActivity {
 
     public Gson gson;
     public LoadingDialogUtils dialogUtils;
@@ -28,6 +26,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayout());
         ButterKnife.bind(this);
+
         //当前手机版本为Android 5.0及以上
         if (Build.VERSION.SDK_INT >= 23) {
             View decorView = getWindow().getDecorView();
@@ -37,10 +36,9 @@ public abstract class BaseActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
-
         gson = new Gson();
-        toastView = new ToastView(BaseActivity.this);
-        dialogUtils = new LoadingDialogUtils(BaseActivity.this);
+        toastView = new ToastView(BaseNoBarActivity.this);
+        dialogUtils = new LoadingDialogUtils(BaseNoBarActivity.this);
         getIntentData(savedInstanceState);
         initView();
         initData();

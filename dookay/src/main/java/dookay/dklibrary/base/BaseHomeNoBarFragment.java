@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import dookay.dklibrary.view.LoadingDialogUtils;
 import dookay.dklibrary.view.ToastView;
 
-public abstract class BaseHomeFragment extends Fragment {
+public abstract class BaseHomeNoBarFragment extends Fragment {
     protected Activity mActivity;
     public Gson gson;
     public LoadingDialogUtils dialogUtils;
@@ -42,7 +42,7 @@ public abstract class BaseHomeFragment extends Fragment {
             , Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutId(), container, false);
         ButterKnife.bind(this, view);
-
+        
         //当前手机版本为Android 5.0及以上
         if (Build.VERSION.SDK_INT >= 23) {
             View decorView = getActivity().getWindow().getDecorView();

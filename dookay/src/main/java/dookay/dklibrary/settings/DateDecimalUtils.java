@@ -37,7 +37,6 @@ public class DateDecimalUtils {
     public static String getTimeYearOne(long time) {
         return milliseconds2String(time, format1);
     }
-
     public static String getTimeYearTwo(long time) {
         return milliseconds2String(time, format2);
     }
@@ -53,7 +52,6 @@ public class DateDecimalUtils {
     public static String getTimeYearFive(long time) {
         return milliseconds2String(time, format5);
     }
-
     public static String getTimeYearSix(long time) {
         return milliseconds2String(time, format6);
     }
