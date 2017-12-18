@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import butterknife.OnClick;
 import dookay.dklibrary.R;
+import dookay.dklibrary.interfaceutil.ViewoClickInterface;
 import dookay.dklibrary.utils.ConstantIntUtils;
 import dookay.dklibrary.view.popup.basepopup.BasePopupWindow;
 
@@ -73,5 +74,14 @@ public abstract class SelectPicturePopup extends BasePopupWindow {
         return popupView.findViewById(R.id.popup_anima);
     }
 
+    @Override
+    public void onDismiss() {
+        testEnableClickInterface.onClick();
+        super.onDismiss();
+    }
+    public ViewoClickInterface testEnableClickInterface;
+    public void dissOnClick(ViewoClickInterface clickInterface) {
+        this.testEnableClickInterface = clickInterface;
+    }
 
 }

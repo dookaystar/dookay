@@ -13,6 +13,7 @@ import com.jph.takephoto.model.TResult;
 import java.util.ArrayList;
 import java.util.List;
 
+import dookay.dklibrary.interfaceutil.ViewoClickInterface;
 import dookay.dklibrary.settings.DateDecimalUtils;
 import dookay.dklibrary.utils.SendMessageTimerUtils;
 import dookay.dklibrary.utils.GlideImgUtils;
@@ -59,6 +60,13 @@ public class MainPhotographActivity extends TakePhotoActivity {
                 Log.e("str", "---东方败--" + str);
             }
         };
+
+        topPopup.dissOnClick(new ViewoClickInterface() {
+            @Override
+            public void onClick() {
+                Log.e("infosss", "fdsljfoksdjifji");
+            }
+        });
 
         textViewtwo.setOnClickListener(new View.OnClickListener() {
             @Override

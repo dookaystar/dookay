@@ -16,6 +16,7 @@ import com.github.library.listener.OnRecyclerItemClickListener;
 import java.util.List;
 
 import dookay.dklibrary.R;
+import dookay.dklibrary.interfaceutil.ViewoClickInterface;
 import dookay.dklibrary.utils.ConstantIntUtils;
 import dookay.dklibrary.utils.DimensUtils;
 import dookay.dklibrary.utils.RecylerAdapterUtils;
@@ -152,5 +153,14 @@ public abstract class FourthChoicePopup extends BasePopupWindow {
 
     public abstract void onclikItem(String str, int item);
 
+    @Override
+    public void onDismiss() {
+        testEnableClickInterface.onClick();
+        super.onDismiss();
+    }
+    public ViewoClickInterface testEnableClickInterface;
+    public void dissOnClick(ViewoClickInterface clickInterface) {
+        this.testEnableClickInterface = clickInterface;
+    }
 
 }

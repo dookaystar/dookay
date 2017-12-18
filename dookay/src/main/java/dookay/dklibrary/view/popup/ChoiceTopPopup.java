@@ -16,6 +16,7 @@ import com.github.library.listener.OnRecyclerItemClickListener;
 import java.util.List;
 
 import dookay.dklibrary.R;
+import dookay.dklibrary.interfaceutil.ViewoClickInterface;
 import dookay.dklibrary.utils.ConstantIntUtils;
 import dookay.dklibrary.utils.DimensUtils;
 import dookay.dklibrary.utils.RecylerAdapterUtils;
@@ -110,8 +111,6 @@ public abstract class ChoiceTopPopup extends BasePopupWindow {
             recyclerAdapter.setData(stringList);
         }
     }
-
-
     public BasePopupWindow.OnDismissListener onDismissListener = new BasePopupWindow.OnDismissListener() {
         @Override
         public boolean onBeforeDismiss() {
@@ -148,5 +147,16 @@ public abstract class ChoiceTopPopup extends BasePopupWindow {
     }
 
     public abstract void onclikItem(String str, int item);
-    
+
+    @Override
+    public void onDismiss() {
+        testEnableClickInterface.onClick();
+        super.onDismiss();
+    }
+    public ViewoClickInterface testEnableClickInterface;
+    public void dissOnClick(ViewoClickInterface clickInterface) {
+        this.testEnableClickInterface = clickInterface;
+    }
+
+
 }
