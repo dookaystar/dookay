@@ -42,21 +42,9 @@ public abstract class BaseHomeFragment extends Fragment {
             , Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutId(), container, false);
         ButterKnife.bind(this, view);
-
-
         dialogUtils = new LoadingDialogUtils(getActivity());
         toastView = new ToastView(getActivity());
         initView(view, savedInstanceState);
-
-        //当前手机版本为Android 5.0及以上
-        if (Build.VERSION.SDK_INT >= 23) {
-            View decorView = getActivity().getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(option);
-            getActivity().getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
-
         return view;
     }
 

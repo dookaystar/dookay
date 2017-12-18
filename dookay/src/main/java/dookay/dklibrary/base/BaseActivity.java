@@ -28,23 +28,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayout());
         ButterKnife.bind(this);
-
-
         gson = new Gson();
         toastView = new ToastView(BaseActivity.this);
         dialogUtils = new LoadingDialogUtils(BaseActivity.this);
         getIntentData(savedInstanceState);
         initView();
         initData();
-        //当前手机版本为Android 5.0及以上
-        if (Build.VERSION.SDK_INT >= 23) {
-            View decorView = getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(option);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
-
 
     }
 
