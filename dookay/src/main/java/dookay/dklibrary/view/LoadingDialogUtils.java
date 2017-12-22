@@ -2,6 +2,7 @@ package dookay.dklibrary.view;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.os.Handler;
 import android.widget.TextView;
 
 import dookay.dklibrary.R;
@@ -47,8 +48,12 @@ public class LoadingDialogUtils {
             return;
         }
         if (mydialog.isShowing()) {
-            mydialog.dismiss();
-            mydialog = null;
+            new Handler().postDelayed(new Runnable() {
+                public void run() {
+                    mydialog.dismiss();
+                    mydialog = null;
+                }
+            }, 1000);
         }
     }
 }
