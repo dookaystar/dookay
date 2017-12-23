@@ -48,12 +48,8 @@ public class LoadingDialogUtils {
             return;
         }
         if (mydialog.isShowing()) {
-            new Handler().postDelayed(new Runnable() {
-                public void run() {
-                    mydialog.dismiss();
-                    mydialog = null;
-                }
-            }, 1000);
+            mydialog.dismiss();
+            mydialog = null;
         }
     }
 }

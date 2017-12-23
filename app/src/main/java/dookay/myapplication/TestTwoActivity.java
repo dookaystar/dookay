@@ -40,6 +40,7 @@ public class TestTwoActivity extends BaseActivity {
                 String infos = "http://app-api.myphomule.com/api/common/dateList";
                 // Map<String, String> stringMap = new HashMap<String, String>();
                 dialogUtils.showDialog();
+                
                 okhttpUtils.getJson(infos, new HashMap<String, String>(), 0);
 
             }
